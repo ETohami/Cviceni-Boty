@@ -1,10 +1,19 @@
 /* nejsme vcerejsi, pouzivame moderni a intuitivni box model */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+ ::after,
+ ::before {
+    box-sizing: inherit;
+}
 
 body {
     text-rendering: optimizeLegibility;
 }
+
 
 /*
  BARVY
@@ -20,4 +29,143 @@ body {
  https://fonts.google.com/specimen/Rubik
 */
 
+
 /* ----- zde zacni psat vlastni css ----- */
+
+.zbozi {
+    width: 670px;
+    min-height: 440px;
+    position: relative;
+    display: flex;
+    border: 2px solid rgb(26, 167, 167);
+    border-radius: 15px;
+    /* margin-left: 200px;*/
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #f5f5f5;
+    /* display: flex;*/
+}
+
+.vizual,
+.detaily {
+    position: relative;
+    /* justify-content: space-between;*/
+    flex-basis: 50%;
+    width: 50%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.vizual {
+    background-image: linear-gradient(#06d7c1, #50cc49);
+    padding: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.slogan {
+    flex-grow: 1;
+}
+
+.cenovka,
+.zaruka {
+    text-align: right;
+}
+
+.bota {
+    position: relative;
+    top: -10px;
+    left: -120px;
+}
+
+.slogan {
+    top: 30px;
+}
+
+.cenovka {
+    position: relative;
+    font-size: 28px;
+    font-weight: 500;
+    top: -80px;
+}
+
+.zaruka {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.detaily {
+    padding: 30px;
+}
+
+.nazev {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.product {
+    color: cadetblue;
+    top: -5px;
+}
+
+.popis {
+    top: 20px;
+}
+
+.velikosti {
+    display: flex;
+    /* justify-content: space-between;*/
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    text-decoration: none;
+    list-style-type: none;
+    /*   text-align: center;*/
+    align-items: center;
+    padding: 0;
+}
+
+.velikosti li a {
+    border: 1px solid;
+    color: transparent;
+    border-radius: 50%;
+    padding: 4px;
+    text-decoration: none;
+    outline: none;
+}
+
+.velikosti li a:hover,
+.velikosti li a:focus {
+    border-color: currentColor;
+    color: #f15f42;
+}
+
+.tlacitko {
+    background-color: #f15f42;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+.tlacitko:hover,
+.tlacitko:focus {
+    background-color: #af7569;
+}
+
+.detaily {
+    display: flex;
+    flex-direction: column;
+}
+
+.velikosti {
+    flex-grow: 1;
+    align-content: flex-start;
+}
